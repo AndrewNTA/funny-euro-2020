@@ -43,8 +43,8 @@ const Profile = () => {
           Thông tin cá nhân
         </div>
         <div className="row-profile">
-          <span className="label">Tên:</span>
-          <span className="info">{profileUsername}</span>
+          <span className="label-profile">Tên:</span>
+          <span className="info-profile">{profileUsername}</span>
         </div>
         <div className="row-profile">
           <span className="label-profile">Email:</span>
