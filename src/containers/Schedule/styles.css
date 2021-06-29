@@ -1,6 +1,7 @@
 .container-schedule {
     width: 800px;
     margin: 40px auto 50px auto;
+    box-sizing: border-box;
 }
 
 .date-schedule {
@@ -98,4 +99,21 @@
 
 .row-schedule:hover .arrow-btn-schedule {
     background-image: url('../../static/images/icon-arrow-blue.png');
+}
+
+@media only screen and (max-width: 600px) {
+    .container-schedule {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    .arrow-schedule {
+        display: none;
+    }
+    .main-row-schedule {
+        margin: 0;
+    }
+    .team-name-schedule {
+        min-width: unset;
+    }
 }
