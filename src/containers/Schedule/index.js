@@ -7,34 +7,34 @@ const Schedule = () => {
     <div className="container-schedule">
       {data.map(value => {
         return <div key={value.date}>
-          <div className="date">{value.date}</div>
-          <div className="round">{value.round}</div>
+          <div className="date-schedule">{value.date}</div>
+          <div className="round-schedule">{value.round}</div>
           <div>
             {value.matches.map(match => {
-              return <div className="row" key={match.id}>
-                <div className="main-row">
-                  <div className="team">
-                    <span className="team-name align-right">{match.team1.name}</span>
-                    <img alt="flag" src={match.team1.flag} className="team-flag"/>
+              return <div className="row-schedule" key={match.id}>
+                <div className="main-row-schedule">
+                  <div className="team-schedule">
+                    <span className="team-name-schedule align-right-schedule">{match.team1.name}</span>
+                    <img alt="flag" src={match.team1.flag} className="team-flag-schedule"/>
                   </div>
-                  <div className="middle">
-                    {match.isFinished ? <div className="result">
-                      <span className="score">{match.team1.score}</span>
-                      {match.isPen && <span className="pen">{`(${match.team1.pen})`}</span>}
-                      <span className="divider">-</span>
-                      <span className="score">{match.team2.score}</span>
-                      {match.isPen && <span className="pen">{`(${match.team2.pen})`}</span>}
-                    </div> : <div className="time">
+                  <div className="middle-schedule">
+                    {match.isFinished ? <div className="result-schedule">
+                      <span className="score-schedule">{match.team1.score}</span>
+                      {match.isPen && <span className="pen-schedule">{`(${match.team1.pen})`}</span>}
+                      <span className="divider-schedule">-</span>
+                      <span className="score-schedule">{match.team2.score}</span>
+                      {match.isPen && <span className="pen-schedule">{`(${match.team2.pen})`}</span>}
+                    </div> : <div className="time-schedule">
                       {match.time}
                     </div>}
                   </div>
-                  <div className="team">
-                    <img alt="flag" src={match.team2.flag} className="team-flag"/>
+                  <div className="team-schedule">
+                    <img alt="flag" src={match.team2.flag} className="team-flag-schedule"/>
                     <span className="team-name">{match.team2.name}</span>
                   </div>
                 </div>
-                <div className="arrow">
-                  <div className="arrow-btn"/>
+                <div className="arrow-schedule">
+                  <div className="arrow-btn-schedule"/>
                 </div>
               </div>
             })}

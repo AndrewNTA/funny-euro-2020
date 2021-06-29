@@ -3,13 +3,13 @@
     margin: 40px auto 50px auto;
 }
 
-.date {
+.date-schedule {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 15px;
 }
 
-.round {
+.round-schedule {
     width: 80px;
     margin-right: auto;
     margin-left: auto;
@@ -22,7 +22,7 @@
     margin-bottom: 15px;
 }
 
-.row {
+.row-schedule {
     box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.08);
     margin-bottom: 20px;
     display: flex;
@@ -34,59 +34,59 @@
     border: 1px solid #ffffff;
 }
 
-.row:hover {
+.row-schedule:hover {
     border: 1px solid #139aed;
 }
-.team-name {
+.team-name-schedule {
     margin: 0 8px;
     min-width: 75px;
 }
-.align-right {
+.align-right-schedule {
     text-align: right;
 }
-.time {
+.time-schedule {
     font-weight: bold;
     margin: 0 20px;
 }
 
-.main-row {
+.main-row-schedule {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.result {
+.result-schedule {
     margin: 0 20px;
     min-width: 60px;
     text-align: center;
 }
-.score {
+.score-schedule {
     font-weight: bold;
 }
-.divider {
+.divider-schedule {
     font-size: 20px;
     margin: 0 6px;
 }
-.pen {
+.pen-schedule {
     font-size: 14px;
     color: #ff1208;
 }
-.team {
+.team-schedule {
     display: flex;
     align-items: center;
 }
 
-.team-flag {
+.team-flag-schedule {
     width: 25px;
     margin-top: 2px;
 }
 
-.arrow {
+.arrow-schedule {
     width: 20px;
     height: 20px;
 }
 
-.arrow-btn {
+.arrow-btn-schedule {
     width: 20px;
     height: 20px;
     background-image: url('../../static/images/icon-arrow-gray.png');
@@ -95,6 +95,6 @@
     background-size: 20px;
 }
 
-.row:hover .arrow-btn {
+.row-schedule:hover .arrow-btn-schedule {
     background-image: url('../../static/images/icon-arrow-blue.png');
 }

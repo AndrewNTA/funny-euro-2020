@@ -36,25 +36,25 @@ const Profile = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-profile">
       <img src={banner} className="app-banner" alt="banner" />
-      <div className="wrapper">
-        <div className="title">
+      <div className="wrapper-profile">
+        <div className="title-profile">
           Thông tin cá nhân
         </div>
-        <div className="row">
+        <div className="row-profile">
           <span className="label">Tên:</span>
           <span className="info">{profileUsername}</span>
         </div>
-        <div className="row">
-          <span className="label">Email:</span>
-          <span className="info">{profileEmail}</span>
+        <div className="row-profile">
+          <span className="label-profile">Email:</span>
+          <span className="info-profile">{profileEmail}</span>
         </div>
-        <div className="control-group">
-          <div className="home-btn" onClick={goHome}>Trang chủ</div>
-          <div className="logout-btn" onClick={handleLogout}>Đăng xuất</div>
+        <div className="control-group-profile">
+          <div className="home-btn-profile" onClick={goHome}>Trang chủ</div>
+          <div className="logout-btn-profile" onClick={handleLogout}>Đăng xuất</div>
         </div>
-        <div className="title space">
+        <div className="title-profile space-profile">
           Lịch sử dự đoán
         </div>
       </div>
