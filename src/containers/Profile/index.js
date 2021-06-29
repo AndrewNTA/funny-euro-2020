@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from '../../statistic/images/banner.jpeg';
+import banner from '../../static/images/banner.jpeg';
 import { useHistory } from 'react-router-dom';
 import { gapi } from 'gapi-script';
 import {

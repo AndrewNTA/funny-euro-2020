@@ -1,0 +1,81 @@
+.container-schedule {
+    width: 800px;
+    margin: 40px auto 50px auto;
+}
+
+.date {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.round {
+    width: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    border-radius: 4px;
+    color: #2a5862;
+    background-color: #e8f4f7;
+    padding: 6px 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.row {
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #ffffff;
+}
+
+.row:hover {
+    border: 1px solid #139aed;
+}
+.team-name {
+    margin: 0 8px;
+}
+.time {
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.main-row {
+    width: 780px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+}
+
+.team-flag {
+    width: 25px;
+    margin-top: 2px;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+}
+
+.arrow-btn {
+    width: 20px;
+    height: 20px;
+    background-image: url('../../static/images/icon-arrow-gray.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.row:hover .arrow-btn {
+    background-image: url('../../static/images/icon-arrow-blue.png');
+}

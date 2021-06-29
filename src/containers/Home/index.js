@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import banner from '../../statistic/images/banner.jpeg';
-import logo from '../../statistic/images/logo-small.jpeg';
+import banner from '../../static/images/banner.jpeg';
+import logo from '../../static/images/logo-small.jpeg';
 import { useGoogleLogin } from 'react-google-login';
 import {
   CLIENT_ID,
@@ -11,6 +11,7 @@ import {
   ZALORA_EURO_TOKEN
 } from '../../core/constants';
 import cookie from '../../cookie';
+import Schedule from '../Schedule';
 import './styles.css';
 
 const Home = () => {
@@ -56,6 +57,7 @@ const Home = () => {
         </div>}
       </div>
       <img src={banner} className="app-banner" alt="banner" />
+      <Schedule/>
     </div>
   );
 };
