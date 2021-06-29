@@ -1,0 +1,75 @@
+.container-match-detail {
+    width: 860px;
+    margin: 40px auto 50px auto;
+}
+
+.top-match-detail {
+    padding: 15px 20px;
+    border: 1px solid #dddddd;
+    margin-bottom: 40px;
+    border-radius: 5px;
+}
+
+.tag-match-detail {
+    margin-right: 8px;
+    text-align: center;
+    border-radius: 4px;
+    color: #2a5862;
+    background-color: #e8f4f7;
+    padding: 6px 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.match-detail-info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.team-name-match-detail {
+    margin: 0 8px;
+    min-width: 75px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.align-right-match-detail {
+    text-align: right;
+}
+.info-match-detail {
+    color: #2a5862;
+    background-color: #e8f4f7;
+    padding: 4px 10px;
+    margin: 0 20px;
+    border-radius: 5px;
+}
+
+.result-match-detail {
+    margin: 0 20px;
+    min-width: 60px;
+    text-align: center;
+}
+.score-match-detail {
+    font-weight: bold;
+}
+.divider-match-detail {
+    font-size: 20px;
+    margin: 0 6px;
+}
+.pen-match-detail {
+    font-size: 14px;
+    color: #ff1208;
+}
+.team-match-detail {
+    display: flex;
+    align-items: center;
+}
+
+.team-flag-match-detail {
+    width: 50px;
+    margin-top: 2px;
+}

@@ -1,8 +1,14 @@
 import React from 'react';
-import { data } from './data';
+import { useHistory } from 'react-router-dom';
+import { data } from '../../core/data';
 import './styles.css';
 
 const Schedule = () => {
+  const history = useHistory();
+  const goToDetail = (dateId, matchId) => {
+    history.push(`/match/${dateId}/${matchId}`);
+  };
+
   return (
     <div className="container-schedule">
       {data.map(value => {
@@ -11,7 +17,11 @@ const Schedule = () => {
           <div className="round-schedule">{value.round}</div>
           <div>
             {value.matches.map(match => {
-              return <div className="row-schedule" key={match.id}>
+              return <div
+                className="row-schedule"
+                key={match.id}
+                onClick={() => goToDetail(value.dateId, match.id)}
+              >
                 <div className="main-row-schedule">
                   <div className="team-schedule">
                     <span className="team-name-schedule align-right-schedule">{match.team1.name}</span>
