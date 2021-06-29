@@ -14,10 +14,10 @@ const Schedule = () => {
               return <div className="row" key={match.id}>
                 <div className="main-row">
                   <div className="team">
-                    <span className="team-name">{match.team1.name}</span>
+                    <span className="team-name align-right">{match.team1.name}</span>
                     <img alt="flag" src={match.team1.flag} className="team-flag"/>
                   </div>
-                  <div className="result">
+                  <div className="middle">
                     {match.isFinished ? <div className="result">
                       <span className="score">{match.team1.score}</span>
                       {match.isPen && <span className="pen">{`(${match.team1.pen})`}</span>}

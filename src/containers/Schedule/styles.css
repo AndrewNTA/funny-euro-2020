@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 15px;
+    padding: 10px 15px;
     border-radius: 6px;
     cursor: pointer;
     border: 1px solid #ffffff;
@@ -39,6 +39,10 @@
 }
 .team-name {
     margin: 0 8px;
+    min-width: 75px;
+}
+.align-right {
+    text-align: right;
 }
 .time {
     font-weight: bold;
@@ -46,12 +50,27 @@
 }
 
 .main-row {
-    width: 780px;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+.result {
+    margin: 0 20px;
+    min-width: 60px;
+    text-align: center;
+}
+.score {
+    font-weight: bold;
+}
+.divider {
+    font-size: 20px;
+    margin: 0 6px;
+}
+.pen {
+    font-size: 14px;
+    color: #ff1208;
+}
 .team {
     display: flex;
     align-items: center;

@@ -15,20 +15,20 @@ export const data = [
       {
         id: 'dfd3434',
         time: '23:00',
-        isFinished: false,
+        isFinished: true,
         isPen: false,
         team1: {
           name: 'Anh',
           flag: ANH_FLAG,
           special: '',
-          score: '',
+          score: 2,
           pen: '',
         },
         team2: {
           name: 'Đức',
           flag: DUC_FLAG,
           special: '',
-          score: '',
+          score: 1,
           pen: '',
         }
       }
@@ -41,21 +41,21 @@ export const data = [
       {
         id: 'dfj323434',
         time: '02:00',
-        isFinished: false,
-        isPen: false,
+        isFinished: true,
+        isPen: true,
         team1: {
           name: 'Thuỵ Điển',
           flag: THUY_DIEN_FLAG,
           special: '',
-          score: '',
-          pen: '',
+          score: 4,
+          pen: 5,
         },
         team2: {
           name: 'Ukraine',
           flag: UKRAINE_FLAG,
           special: '',
-          score: '',
-          pen: '',
+          score: 4,
+          pen: 3,
         }
       }
     ]
