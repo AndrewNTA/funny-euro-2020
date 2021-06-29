@@ -5,12 +5,11 @@ import { useGoogleLogin } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import './App.css';
 
-const logFn = res => { console.log('data ===>', res) };
+const logFn = res => { console.log('data ===>', res.tokenId, res.profileObj) };
 const errorFn = err => { console.log('error ===>', err) };
 const clientId = '442973200160-si3h4jb3e4bkbrt0gulqp71qdgi3bva8.apps.googleusercontent.com';
 
 function App() {
-  const auth2 = gapi.auth2.getAuthInstance();
   const { signIn } = useGoogleLogin({
     onSuccess: logFn,
     clientId,
@@ -19,12 +18,11 @@ function App() {
   });
 
   const handleLogout = () => {
+    const auth2 = gapi.auth2 && gapi.auth2.getAuthInstance();
     if (auth2 != null) {
       auth2.signOut().then(
-        auth2.disconnect().then(console.log('LOGOUT SUCCESSFUL'))
+        auth2.disconnect()
       )
-    } else {
-      console.log('Something wrong!!!')
     }
   };
 
