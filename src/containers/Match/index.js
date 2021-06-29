@@ -90,6 +90,18 @@ const Match = () => {
           <div className="title-detail">
             Danh sách dự đoán
           </div>
+          <div className="table-detail">
+            <div className="box-size">
+              <div className="team-label">
+                {detail.team1.name}
+              </div>
+            </div>
+            <div className="box-size">
+              <div className="team-label">
+                {detail.team2.name}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 .container-match-detail {
-    width: 860px;
+    width: 960px;
     margin: 40px auto 50px auto;
 }
 
@@ -43,6 +43,23 @@
 }
 .middle-section {
     text-align: center;
+}
+.table-detail {
+    display: flex;
+    justify-content: space-between;
+}
+.box-size {
+    width: 49%;
+    box-sizing: border-box;
+    background-color: #e8f4f7;
+    padding: 10px 20px;
+}
+.team-label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #5ab9ea
 }
 .clear-btn {
     display: inline-block;
@@ -151,7 +168,7 @@
     content: '';
     width: 12px;
     height: 12px;
-    background: #2a5862;
+    background: #5ab9ea;
     position: absolute;
     top: 4px;
     left: 4px;
