@@ -85,6 +85,11 @@ const Match = () => {
     return null;
   }
 
+  const teamSelected = userHistory &&
+    userHistory[profileId] &&
+    userHistory[profileId][matchId] &&
+    userHistory[profileId][matchId]['selected'];
+
   const { date, round, detail } = matchDetail;
   return (
     <div>
@@ -130,6 +135,7 @@ const Match = () => {
                 type="radio"
                 id={detail.team1.id}
                 name="radio-group"
+                checked={teamSelected === detail.team1.id}
                 onChange={() => handleBet(detail.team1.id)}
               />
               <label htmlFor={detail.team1.id}>{detail.team1.name}</label>
@@ -139,15 +145,16 @@ const Match = () => {
                 type="radio"
                 id={detail.team2.id}
                 name="radio-group"
+                checked={teamSelected === detail.team2.id}
                 onChange={() => handleBet(detail.team2.id)}
               />
               <label htmlFor={detail.team2.id}>{detail.team2.name}</label>
             </p>
           </form>
           <div className="middle-section">
-            <div className="clear-btn">
+            {teamSelected && <div className="clear-btn">
               Xoá dự đoán
-            </div>
+            </div>}
           </div>
         </div>
         <div className="bottom-match-detail">
@@ -162,9 +169,9 @@ const Match = () => {
               {
                 betRecords && betRecords[detail.team1.id] ?
                   <ul>
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                    <li>Milk</li>
+                    {betRecords[detail.team1.id].map(mail => {
+                      return <li key={mail}>{mail}</li>
+                    })}
                   </ul> :
                   <div className="center-text">
                     Chưa có dữ liệu
@@ -178,9 +185,9 @@ const Match = () => {
               {
                 betRecords && betRecords[detail.team2.id] ?
                   <ul>
-                    <li>Coffee</li>
-                    <li>Tea</li>
-                    <li>Milk</li>
+                    {betRecords[detail.team2.id].map(mail => {
+                      return <li key={mail}>{mail}</li>
+                    })}
                   </ul> :
                   <div className="center-text">
                     Chưa có dữ liệu
