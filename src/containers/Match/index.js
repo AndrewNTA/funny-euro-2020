@@ -95,11 +95,21 @@ const Match = () => {
               <div className="team-label">
                 {detail.team1.name}
               </div>
+              <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>
             </div>
             <div className="box-size">
               <div className="team-label">
                 {detail.team2.name}
               </div>
+              <ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+              </ul>
             </div>
           </div>
         </div>

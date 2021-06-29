@@ -4,8 +4,6 @@
     <list default="true" id="7b190770-4b0f-48c4-a4eb-704e3efd77c5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Match/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Match/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Match/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Match/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/data.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,46 +21,38 @@
     <settings elmCompilerPath="" elmFormatPath="" elmTestPath="" isElmFormatOnSaveEnabled="false" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7330873">
-      <split-first>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/containers/Match/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="82" column="40" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/core/data.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/containers/Match/styles.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="693">
-                  <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/containers/Match/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="847">
+              <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core/data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/Match/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="362">
+              <caret line="159" column="16" lean-forward="true" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -106,8 +96,8 @@
         <option value="$PROJECT_DIR$/src/containers/MenuBar/index.js" />
         <option value="$PROJECT_DIR$/src/containers/MenuBar/styles.css" />
         <option value="$PROJECT_DIR$/src/core/data.js" />
-        <option value="$PROJECT_DIR$/src/containers/Match/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Match/styles.css" />
+        <option value="$PROJECT_DIR$/src/containers/Match/index.js" />
       </list>
     </option>
   </component>
@@ -219,7 +209,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624934844383</updated>
-      <workItem from="1624934845535" duration="25679000" />
+      <workItem from="1624934845535" duration="26490000" />
     </task>
     <task id="LOCAL-00001" summary="Update git ignore">
       <created>1624936213807</created>
@@ -382,11 +372,25 @@
       <option name="project" value="LOCAL" />
       <updated>1624960214779</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Implement detail">
+      <created>1624962356980</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1624962356980</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Implement data">
+      <created>1624963089991</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1624963089991</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25679000" />
+    <option name="totallyTimeSpent" value="26490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="25" width="1920" height="1055" extended-state="6" />
@@ -440,9 +444,10 @@
     <MESSAGE value="Fix bug" />
     <MESSAGE value="Add toast" />
     <MESSAGE value="Remove redundant code" />
-    <MESSAGE value="Implement detail" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Implement detail" />
+    <MESSAGE value="Implement data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement data" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/favicon.ico">
@@ -669,27 +674,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/Match/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="159" column="16" lean-forward="true" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/core/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="242">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Match/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="82" column="40" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="40" />
+        <state relative-caret-position="847">
+          <caret line="111" column="19" selection-start-line="111" selection-start-column="19" selection-end-line="111" selection-end-column="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/Match/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
         </state>
       </provider>
     </entry>
