@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import banner from '../../static/images/banner.jpeg';
 import logo from '../../static/images/logo-small.jpeg';
 import { useGoogleLogin } from 'react-google-login';
+import { useToasts } from 'react-toast-notifications';
 import {
   CLIENT_ID,
   ZALORA_EURO_PROFILE_EMAIL,
@@ -16,6 +17,7 @@ import './styles.css';
 
 const Home = () => {
   const history = useHistory();
+  const { addToast } = useToasts();
   const currentUsername = cookie.get(ZALORA_EURO_PROFILE_NAME, { path: '/' }) || '';
   const [username, setUsername] = useState(currentUsername);
   const handleLoginSuccess = response => {
@@ -29,13 +31,30 @@ const Home = () => {
     cookie.set(ZALORA_EURO_PROFILE_NAME, profileName, { path: '/' });
     cookie.set(ZALORA_EURO_PROFILE_EMAIL, profileEmail, { path: '/' });
 
+    showToastSuccess();
     setUsername(profileName);
+  };
+
+  const showToastSuccess = () => {
+    addToast('Đăng nhập thành công', {
+      appearance: 'success',
+      autoDismissTimeout: 3000,
+      autoDismiss: true,
+    });
+  };
+
+  const showToastFailed = () => {
+    addToast('Đăng nhập thất bại! Vui lòng thử lại', {
+      appearance: 'error',
+      autoDismissTimeout: 3000,
+      autoDismiss: true,
+    });
   };
 
   const { signIn } = useGoogleLogin({
     onSuccess: handleLoginSuccess,
     clientId: CLIENT_ID,
-    onFailure: () => {},
+    onFailure: () => {showToastFailed()},
     cookiePolicy: 'single_host_origin',
   });
 
@@ -57,6 +76,7 @@ const Home = () => {
         </div>}
       </div>
       <img src={banner} className="app-banner" alt="banner" />
+      <div onClick={showToastSuccess}>click</div>
       <Schedule/>
     </div>
   );
