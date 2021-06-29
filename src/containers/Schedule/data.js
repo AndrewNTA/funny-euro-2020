@@ -13,36 +13,36 @@ export const data = [
     round: 'Vòng 1/8',
     matches: [
       {
-        id: 'dfd3434',
+        id: 'anh_duc_2906',
         time: '23:00',
-        isFinished: true,
+        isFinished: false,
         isPen: false,
         team1: {
           name: 'Anh',
           flag: ANH_FLAG,
           special: '',
-          score: 2,
+          score: '',
           pen: '',
         },
         team2: {
           name: 'Đức',
           flag: DUC_FLAG,
           special: '',
-          score: 1,
+          score: '',
           pen: '',
         }
       }
     ]
   },
   {
-    date: 'Thứ tư, 20/06/2021',
+    date: 'Thứ tư, 30/06/2021',
     round: 'Vòng 1/8',
     matches: [
       {
-        id: 'dfj323434',
+        id: 'td_ukraine_3006',
         time: '02:00',
-        isFinished: true,
-        isPen: true,
+        isFinished: false,
+        isPen: false,
         team1: {
           name: 'Thuỵ Điển',
           flag: THUY_DIEN_FLAG,
@@ -65,7 +65,7 @@ export const data = [
     round: 'Tứ kết',
     matches: [
       {
-        id: '0kjd82hd',
+        id: 'bi_y_0307',
         time: '02:00',
         isFinished: false,
         isPen: false,
@@ -85,7 +85,7 @@ export const data = [
         }
       },
       {
-        id: 'kd93ndnfd',
+        id: 'czech_dm_0307',
         time: '23:00',
         isFinished: false,
         isPen: false,
@@ -97,7 +97,7 @@ export const data = [
           pen: '',
         },
         team2: {
-          name: 'Italy',
+          name: 'Đan mạch',
           flag: DAN_MACH_FLAG,
           special: '',
           score: '',

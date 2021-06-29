@@ -30,7 +30,7 @@ const Schedule = () => {
                   </div>
                   <div className="team-schedule">
                     <img alt="flag" src={match.team2.flag} className="team-flag-schedule"/>
-                    <span className="team-name">{match.team2.name}</span>
+                    <span className="team-name-schedule">{match.team2.name}</span>
                   </div>
                 </div>
                 <div className="arrow-schedule">
