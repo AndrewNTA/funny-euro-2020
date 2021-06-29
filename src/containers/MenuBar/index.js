@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import logo from '../../static/images/logo-small.jpeg';
 import { useGoogleLogin } from 'react-google-login';
 import { useToasts } from 'react-toast-notifications';
+
+import logo from '../../static/images/logo-small.jpeg';
 import {
   CLIENT_ID,
   ZALORA_EURO_PROFILE_EMAIL,

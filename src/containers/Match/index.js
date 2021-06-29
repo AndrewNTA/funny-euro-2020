@@ -1,6 +1,8 @@
-import React from 'react';
-import { data } from '../../core/data';
+import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
+
+import { data } from '../../core/data';
+import firebase from '../../core/firebase';
 import MenuBar from '../MenuBar';
 import './styles.css';
 
@@ -24,8 +26,19 @@ const getDetailMatch = (matchId, dateId) => {
 
 const Match = () => {
   const { matchId, dateId } = useParams();
+  const [betRecords, setBetRecords] = useState(null);
 
-  const matchDetail = getDetailMatch(matchId, dateId)
+  useEffect(() => {
+    console.log('matchID', matchId);
+      const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
+
+      betRecordsRef.on('value', snapshot => {
+        const result = snapshot.val();
+        setBetRecords(result);
+      });
+  }, []);
+
+  const matchDetail = getDetailMatch(matchId, dateId);
 
   if (!matchDetail) {
     return null;
@@ -72,7 +85,7 @@ const Match = () => {
           <div className="label-middle">Bạn chọn</div>
           <form action="#" className="form-data">
             <p>
-              <input type="radio" id={detail.team1.id} name="radio-group" checked/>
+              <input type="radio" id={detail.team1.id} name="radio-group"/>
                 <label htmlFor={detail.team1.id}>{detail.team1.name}</label>
             </p>
             <p>
@@ -95,21 +108,33 @@ const Match = () => {
               <div className="team-label">
                 {detail.team1.name}
               </div>
-              <ul>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-              </ul>
+              {
+                betRecords && betRecords[detail.team1.id] ?
+                  <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                  </ul> :
+                  <div className="center-text">
+                    Chưa có dữ liệu
+                  </div>
+              }
             </div>
             <div className="box-size">
               <div className="team-label">
                 {detail.team2.name}
               </div>
-              <ul>
-                <li>Coffee</li>
-                <li>Tea</li>
-                <li>Milk</li>
-              </ul>
+              {
+                betRecords && betRecords[detail.team2.id] ?
+                  <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                  </ul> :
+                  <div className="center-text">
+                    Chưa có dữ liệu
+                  </div>
+              }
             </div>
           </div>
         </div>

@@ -136,6 +136,9 @@
     width: 50px;
     margin-top: 2px;
 }
+.center-text {
+    text-align: center;
+}
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {

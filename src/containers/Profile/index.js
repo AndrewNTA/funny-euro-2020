@@ -1,7 +1,8 @@
 import React from 'react';
-import banner from '../../static/images/banner.jpeg';
 import { useHistory } from 'react-router-dom';
 import { gapi } from 'gapi-script';
+
+import banner from '../../static/images/banner.jpeg';
 import {
   ZALORA_EURO_PROFILE_EMAIL,
   ZALORA_EURO_PROFILE_NAME,
