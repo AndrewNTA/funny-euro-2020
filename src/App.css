@@ -21,3 +21,16 @@
   cursor: pointer;
   color: #ffffff;
 }
+
+.menu-welcome {
+  color: #ffffff;
+}
+
+.welcome-text {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.username {
+    font-weight: bold;
+}
