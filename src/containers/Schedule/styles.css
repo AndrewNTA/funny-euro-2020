@@ -101,7 +101,7 @@
     background-image: url('../../static/images/icon-arrow-blue.png');
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 996px) {
     .container-schedule {
         width: 100%;
         margin: 0;
