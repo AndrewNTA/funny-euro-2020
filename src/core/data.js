@@ -1,11 +1,11 @@
-import ANH_FLAG from '../static/images/england-flag.png';
-import DUC_FLAG from '../static/images/germany-flag.png';
-import THUY_DIEN_FLAG from '../static/images/thuydien-flag.png';
+import ENGLAND_FLAG from '../static/images/england-flag.png';
+import GERMANY_FLAG from '../static/images/germany-flag.png';
+import SWEDEN_FLAG from '../static/images/sweden-flag.png';
 import UKRAINE_FLAG from '../static/images/ukraine-flag.png';
-import BI_FLAG from '../static/images/bi-flag.png';
-import Y_FLAG from '../static/images/itialy-flag.png';
+import BELGIUM_FLAG from '../static/images/belgium.png';
+import ITALY_FLAG from '../static/images/italy-flag.png';
 import CZECH_FLAG from '../static/images/czech-flag.png';
-import DAN_MACH_FLAG from '../static/images/danmach-flag.png';
+import DENMARK_FLAG from '../static/images/denmark-flag.png';
 
 export const data = [
   {
@@ -14,26 +14,26 @@ export const data = [
     round: 'Vòng 1/8',
     matches: [
       {
-        id: 'anh_duc_2906',
+        id: 'england_germany_2906',
         time: '23:00',
         isFinished: true,
-        isPen: true,
-        info: 'Anh chấp 1',
+        isPen: false,
+        info: 'Anh chấp 0.5',
         team1: {
           id: 'england',
           name: 'Anh',
-          flag: ANH_FLAG,
+          flag: ENGLAND_FLAG,
           special: '',
-          score: 3,
-          pen: 4,
+          score: 2,
+          pen: '',
         },
         team2: {
           id: 'germany',
           name: 'Đức',
-          flag: DUC_FLAG,
+          flag: GERMANY_FLAG,
           special: '',
-          score: 2,
-          pen: 5,
+          score: 0,
+          pen: '',
         }
       }
     ]
@@ -44,7 +44,7 @@ export const data = [
     round: 'Vòng 1/8',
     matches: [
       {
-        id: 'td_ukraine_3006',
+        id: 'sweden_ukraine_3006',
         time: '02:00',
         isFinished: false,
         isPen: false,
@@ -52,18 +52,18 @@ export const data = [
         team1: {
           id: 'sweden',
           name: 'Thuỵ Điển',
-          flag: THUY_DIEN_FLAG,
+          flag: SWEDEN_FLAG,
           special: '',
-          score: 4,
-          pen: 5,
+          score: '',
+          pen: '',
         },
         team2: {
           id: 'ukraine',
           name: 'Ukraine',
           flag: UKRAINE_FLAG,
           special: '',
-          score: 4,
-          pen: 3,
+          score: '',
+          pen: '',
         }
       }
     ]
@@ -74,15 +74,15 @@ export const data = [
     round: 'Tứ kết',
     matches: [
       {
-        id: 'bi_y_0307',
+        id: 'belgium_italy_0307',
         time: '02:00',
         isFinished: false,
         isPen: false,
-        info: 'Bỉ chấp 0.75',
+        info: 'Đang cập nhập',
         team1: {
           id: 'belgium',
           name: 'Bỉ',
-          flag: BI_FLAG,
+          flag: BELGIUM_FLAG,
           special: '',
           score: '',
           pen: '',
@@ -90,18 +90,18 @@ export const data = [
         team2: {
           id: 'italy',
           name: 'Italy',
-          flag: Y_FLAG,
+          flag: ITALY_FLAG,
           special: '',
           score: '',
           pen: '',
         }
       },
       {
-        id: 'czech_dm_0307',
+        id: 'czech_denmark_0307',
         time: '23:00',
         isFinished: false,
         isPen: false,
-        info: 'Cân kèo',
+        info: 'Đang cập nhập',
         team1: {
           id: 'czech',
           name: 'Czech',
@@ -113,7 +113,7 @@ export const data = [
         team2: {
           id: 'denmark',
           name: 'Đan mạch',
-          flag: DAN_MACH_FLAG,
+          flag: DENMARK_FLAG,
           special: '',
           score: '',
           pen: '',
