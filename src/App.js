@@ -4,11 +4,11 @@ import logo from './statistic/images/logo-small.jpeg';
 import { useGoogleLogin } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import {
-  CLIENT_ID,
+  CLIENT_ID, ZALORA_EURO_PROFILE_EMAIL,
   ZALORA_EURO_PROFILE_ID,
   ZALORA_EURO_PROFILE_NAME,
   ZALORA_EURO_TOKEN
-} from './containers/Auth/constants';
+} from './core/constants';
 import cookie from './cookie';
 import './App.css';
 
@@ -19,10 +19,12 @@ const App = () => {
     const tokenId = response.tokenId;
     const profileId = response.googleId;
     const profileName = response.profileObj && response.profileObj.name;
+    const profileEmail = response.profileObj && response.profileObj.email;
 
     cookie.set(ZALORA_EURO_TOKEN, tokenId, { path: '/' });
     cookie.set(ZALORA_EURO_PROFILE_ID, profileId, { path: '/' });
     cookie.set(ZALORA_EURO_PROFILE_NAME, profileName, { path: '/' });
+    cookie.set(ZALORA_EURO_PROFILE_EMAIL, profileEmail, { path: '/' });
 
     setUsername(profileName);
   };
@@ -44,6 +46,7 @@ const App = () => {
     cookie.remove(ZALORA_EURO_TOKEN, { path: '/' });
     cookie.remove(ZALORA_EURO_PROFILE_ID, { path: '/' });
     cookie.remove(ZALORA_EURO_PROFILE_NAME, { path: '/' });
+    cookie.remove(ZALORA_EURO_PROFILE_EMAIL, { path: '/' });
 
     setUsername('')
   };
