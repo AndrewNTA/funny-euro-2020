@@ -5,6 +5,11 @@ import { data } from '../../core/data';
 import firebase from '../../core/firebase';
 import MenuBar from '../MenuBar';
 import './styles.css';
+import cookie from '../../cookie';
+import {
+  ZALORA_EURO_PROFILE_ID,
+  ZALORA_EURO_PROFILE_EMAIL
+} from '../../core/constants';
 
 const getDetailMatch = (matchId, dateId) => {
   for(let i = 0; i < data.length; i++) {
@@ -26,19 +31,55 @@ const getDetailMatch = (matchId, dateId) => {
 
 const Match = () => {
   const { matchId, dateId } = useParams();
+  const matchDetail = getDetailMatch(matchId, dateId);
+  const profileId = cookie.get(ZALORA_EURO_PROFILE_ID, { path: '/' }) || '';
+  const profileEmail = cookie.get(ZALORA_EURO_PROFILE_EMAIL, { path: '/' }) || '';
   const [betRecords, setBetRecords] = useState(null);
+  const [userHistory, setUserHistory] = useState(null);
 
   useEffect(() => {
-    console.log('matchID', matchId);
-      const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
+    const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
+    const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
 
-      betRecordsRef.on('value', snapshot => {
-        const result = snapshot.val();
-        setBetRecords(result);
-      });
+    betRecordsRef.on('value', snapshot => {
+      const result = snapshot.val();
+      setBetRecords(result);
+    });
+    userHistoryRef.on('value', snapshot => {
+      const result = snapshot.val();
+      setUserHistory(result);
+    });
   }, []);
 
-  const matchDetail = getDetailMatch(matchId, dateId);
+  const handleBet = teamId => {
+    const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
+    const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
+
+    const teamBetRecord = betRecords[teamId];
+    const newTeamBetRecord = teamBetRecord ? [...teamBetRecord, profileEmail] : [profileEmail];
+
+    const teamUserHistory = userHistory[profileId];
+    const newTeamUserHistory = teamUserHistory ? {
+      ...teamUserHistory,
+      [matchId]: {
+        selected: teamId,
+        nameMatch: `${detail.team1.name} - ${detail.team2.name}`,
+        email: profileEmail,
+      }
+    } : {
+      [matchId]: {
+        selected: teamId,
+        nameMatch: `${detail.team1.name} - ${detail.team2.name}`,
+        email: profileEmail,
+      }
+    };
+    betRecordsRef.update({
+      [teamId]: newTeamBetRecord,
+    });
+    userHistoryRef.update({
+      [profileId]: newTeamUserHistory,
+    });
+  };
 
   if (!matchDetail) {
     return null;
@@ -85,12 +126,22 @@ const Match = () => {
           <div className="label-middle">Bạn chọn</div>
           <form action="#" className="form-data">
             <p>
-              <input type="radio" id={detail.team1.id} name="radio-group"/>
-                <label htmlFor={detail.team1.id}>{detail.team1.name}</label>
+              <input
+                type="radio"
+                id={detail.team1.id}
+                name="radio-group"
+                onChange={() => handleBet(detail.team1.id)}
+              />
+              <label htmlFor={detail.team1.id}>{detail.team1.name}</label>
             </p>
             <p>
-              <input type="radio" id={detail.team2.id} name="radio-group"/>
-                <label htmlFor={detail.team2.id}>{detail.team2.name}</label>
+              <input
+                type="radio"
+                id={detail.team2.id}
+                name="radio-group"
+                onChange={() => handleBet(detail.team2.id)}
+              />
+              <label htmlFor={detail.team2.id}>{detail.team2.name}</label>
             </p>
           </form>
           <div className="middle-section">

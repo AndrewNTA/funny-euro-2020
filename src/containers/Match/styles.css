@@ -148,6 +148,8 @@
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label
 {
+    text-align: left;
+    min-width: 50px;
     position: relative;
     padding-left: 28px;
     cursor: pointer;
