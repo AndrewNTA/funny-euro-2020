@@ -70,3 +70,34 @@
 .home-btn-profile:hover {
     opacity: 0.8;
 }
+
+@media only screen and (max-width: 600px) {
+    .wrapper-profile {
+        width: 100%;
+        margin-top: 50px;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+    .title-profile {
+        font-size: 16px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .space-profile {
+        margin-top: 30px;
+    }
+
+    .row-profile {
+        margin-bottom: 12px;
+    }
+
+    .info-profile {
+        font-size: 16px;
+    }
+
+    .control-group-profile {
+        justify-content: center;
+    }
+
+}

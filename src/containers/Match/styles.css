@@ -1,6 +1,7 @@
 .container-match-detail {
     width: 960px;
     margin: 40px auto 50px auto;
+    box-sizing: border-box;
 }
 
 .top-match-detail {
@@ -185,4 +186,26 @@
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+
+@media only screen and (max-width: 600px) {
+    .container-match-detail {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    .team-name-match-detail {
+        min-width: unset;
+    }
+    .table-detail {
+        display: block;
+        justify-content: unset;
+    }
+    .box-size {
+        width: 100%;
+        box-sizing: border-box;
+        background-color: #e8f4f7;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
 }
