@@ -1,7 +1,8 @@
 import React from 'react';
 import banner from './statistic/images/banner.jpeg';
 import logo from './statistic/images/logo-small.jpeg';
-import { useGoogleLogin, useGoogleLogout } from 'react-google-login';
+import { useGoogleLogin } from 'react-google-login';
+import { gapi } from 'gapi-script';
 import './App.css';
 
 const logFn = res => { console.log('data ===>', res) };
@@ -9,7 +10,7 @@ const errorFn = err => { console.log('error ===>', err) };
 const clientId = '442973200160-si3h4jb3e4bkbrt0gulqp71qdgi3bva8.apps.googleusercontent.com';
 
 function App() {
-
+  const auth2 = gapi.auth2.getAuthInstance();
   const { signIn } = useGoogleLogin({
     onSuccess: logFn,
     clientId,
@@ -17,11 +18,15 @@ function App() {
     cookiePolicy: 'single_host_origin',
   });
 
-  const { signOut } = useGoogleLogout({
-    onLogoutSuccess: logFn,
-    clientId,
-    onFailure: errorFn,
-  });
+  const handleLogout = () => {
+    if (auth2 != null) {
+      auth2.signOut().then(
+        auth2.disconnect().then(console.log('LOGOUT SUCCESSFUL'))
+      )
+    } else {
+      console.log('Something wrong!!!')
+    }
+  };
 
   return (
     <div className="app">
@@ -32,7 +37,7 @@ function App() {
         </div>
       </div>
       <img src={banner} className="app-banner" alt="banner" />
-      <div onClick={signOut}>Logout</div>
+      <div onClick={handleLogout}>Logout</div>
     </div>
   );
 }
