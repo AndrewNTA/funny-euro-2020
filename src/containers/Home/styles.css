@@ -20,6 +20,11 @@
 .login-register-button {
     cursor: pointer;
     color: #ffffff;
+    transition: all 0.3s;
+}
+
+.login-register-button:hover {
+    color: #139aed;
 }
 
 .menu-welcome {
@@ -33,4 +38,10 @@
 
 .username {
     font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.username:hover {
+    color: #139aed;
 }

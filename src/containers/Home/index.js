@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import banner from '../../statistic/images/banner.jpeg';
 import logo from '../../statistic/images/logo-small.jpeg';
 import { useGoogleLogin } from 'react-google-login';
@@ -13,6 +14,7 @@ import cookie from '../../cookie';
 import './styles.css';
 
 const Home = () => {
+  const history = useHistory();
   const currentUsername = cookie.get(ZALORA_EURO_PROFILE_NAME, { path: '/' }) || '';
   const [username, setUsername] = useState(currentUsername);
   const handleLoginSuccess = response => {
@@ -36,6 +38,10 @@ const Home = () => {
     cookiePolicy: 'single_host_origin',
   });
 
+  const goToProfile = () => {
+    history.push('/profile');
+  };
+
   const tokenId = cookie.get(ZALORA_EURO_TOKEN, { path: '/' });
 
   return (
@@ -44,7 +50,7 @@ const Home = () => {
         <img src={logo} className="menu-logo" alt="banner" />
         {tokenId ? <div className="menu-welcome">
           <span className="welcome-text">Welcome</span>
-          <span className="username">{username}</span>
+          <span className="username" onClick={goToProfile}>{username}</span>
         </div> : <div className="login-register-button" onClick={signIn}>
           Đăng ký / Đăng nhập
         </div>}
