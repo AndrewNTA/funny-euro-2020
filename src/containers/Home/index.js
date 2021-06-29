@@ -76,7 +76,6 @@ const Home = () => {
         </div>}
       </div>
       <img src={banner} className="app-banner" alt="banner" />
-      <div onClick={showToastSuccess}>click</div>
       <Schedule/>
     </div>
   );
