@@ -61,6 +61,36 @@ const Match = () => {
             </div>
           </div>
         </div>
+        <div className="bottom-match-detail">
+          <div className="title-detail">
+            Dự đoán kết quả
+          </div>
+          <div className="notify-detail">
+            Vì mục đích giải trí, mỗi account được bet 1 lần trên 1 trận đồng giá 30K. Lưu ý chỉ tính kết quả trong 90
+            phút chính thức. Bạn có thể xem những nguời dự đoán giống bạn ở danh sách bên dưới. Chúc bạn ngày mới vui vẻ
+          </div>
+          <div className="label-middle">Bạn chọn</div>
+          <form action="#" className="form-data">
+            <p>
+              <input type="radio" id={detail.team1.id} name="radio-group" checked/>
+                <label htmlFor={detail.team1.id}>{detail.team1.name}</label>
+            </p>
+            <p>
+              <input type="radio" id={detail.team2.id} name="radio-group"/>
+                <label htmlFor={detail.team2.id}>{detail.team2.name}</label>
+            </p>
+          </form>
+          <div className="middle-section">
+            <div className="clear-btn">
+              Xoá dự đoán
+            </div>
+          </div>
+        </div>
+        <div className="bottom-match-detail">
+          <div className="title-detail">
+            Danh sách dự đoán
+          </div>
+        </div>
       </div>
     </div>
   );

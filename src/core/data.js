@@ -20,6 +20,7 @@ export const data = [
         isPen: true,
         info: 'Anh chấp 1',
         team1: {
+          id: 'england',
           name: 'Anh',
           flag: ANH_FLAG,
           special: '',
@@ -27,6 +28,7 @@ export const data = [
           pen: 4,
         },
         team2: {
+          id: 'germany',
           name: 'Đức',
           flag: DUC_FLAG,
           special: '',
@@ -48,6 +50,7 @@ export const data = [
         isPen: false,
         info: 'Ukraine chấp 0.5',
         team1: {
+          id: 'sweden',
           name: 'Thuỵ Điển',
           flag: THUY_DIEN_FLAG,
           special: '',
@@ -55,6 +58,7 @@ export const data = [
           pen: 5,
         },
         team2: {
+          id: 'ukraine',
           name: 'Ukraine',
           flag: UKRAINE_FLAG,
           special: '',
@@ -76,6 +80,7 @@ export const data = [
         isPen: false,
         info: 'Bỉ chấp 0.75',
         team1: {
+          id: 'belgium',
           name: 'Bỉ',
           flag: BI_FLAG,
           special: '',
@@ -83,6 +88,7 @@ export const data = [
           pen: '',
         },
         team2: {
+          id: 'italy',
           name: 'Italy',
           flag: Y_FLAG,
           special: '',
@@ -97,6 +103,7 @@ export const data = [
         isPen: false,
         info: 'Cân kèo',
         team1: {
+          id: 'czech',
           name: 'Czech',
           flag: CZECH_FLAG,
           special: '',
@@ -104,6 +111,7 @@ export const data = [
           pen: '',
         },
         team2: {
+          id: 'denmark',
           name: 'Đan mạch',
           flag: DAN_MACH_FLAG,
           special: '',
