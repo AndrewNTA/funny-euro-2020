@@ -27,6 +27,8 @@ const Profile = () => {
     cookie.remove(ZALORA_EURO_PROFILE_ID, { path: '/' });
     cookie.remove(ZALORA_EURO_PROFILE_NAME, { path: '/' });
     cookie.remove(ZALORA_EURO_PROFILE_EMAIL, { path: '/' });
+
+    history.push('/');
   };
 
   const goHome = () => {
