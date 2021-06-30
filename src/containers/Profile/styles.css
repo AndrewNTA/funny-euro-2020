@@ -71,6 +71,31 @@
     opacity: 0.8;
 }
 
+.not-found {
+    text-align: center;
+    color: #ff1208;
+}
+
+.row-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    justify-content: center;
+}
+
+.simple-text {
+    margin-right: 5px;
+}
+
+.match-name-profile {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.selected-team-profile {
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 996px) {
     .wrapper-profile {
         width: 100%;

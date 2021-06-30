@@ -75,12 +75,14 @@ const Profile = () => {
         {
           userHistory ? <div>
           {
-            Object.keys(userHistory).map(match => {
+            Object.keys(userHistory).map(matchId => {
+              const match = userHistory[matchId];
               if (isEmpty(match)) {
                 return null;
               } else {
                 return <div className="row-item">
                   <div className="match-name-profile">{match.nameMatch}</div>
+                  <div className="simple-text">Bạn chọn</div>
                   <div className="selected-team-profile">{match.selected}</div>
                 </div>
               }
