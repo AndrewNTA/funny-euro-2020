@@ -126,7 +126,8 @@ const Match = () => {
           </div>
           <div className="notify-detail">
             Vì mục đích giải trí, mỗi account được bet 1 lần trên 1 trận đồng giá 30K. Lưu ý chỉ tính kết quả trong 90
-            phút chính thức. Bạn có thể xem những nguời dự đoán giống bạn ở danh sách bên dưới. Chúc bạn ngày mới vui vẻ
+            phút chính thức. Cổng dự đoán sẽ đóng lại ngay giờ bóng lăn của trận đấu. Bạn có thể xem những nguời dự đoán
+            giống bạn ở danh sách bên dưới.
           </div>
           <div className="label-middle">Bạn chọn</div>
           <form action="#" className="form-data">
