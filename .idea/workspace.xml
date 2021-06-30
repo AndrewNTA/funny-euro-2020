@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b190770-4b0f-48c4-a4eb-704e3efd77c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Match/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Match/index.js" afterDir="false" />
     </list>
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Match/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
-              <caret line="103" column="72" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
+            <state relative-caret-position="482">
+              <caret line="97" column="8" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -503,11 +502,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625015988730</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Handle delete betting">
+      <created>1625017595141</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1625017595141</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39966000" />
+    <option name="totallyTimeSpent" value="41175000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="25" width="1920" height="1055" extended-state="6" />
@@ -541,7 +547,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Handle save user login" />
     <MESSAGE value="Handle logout" />
     <MESSAGE value="Handle router" />
     <MESSAGE value="Implement profile page" />
@@ -566,7 +571,8 @@
     <MESSAGE value="Handle bet good" />
     <MESSAGE value="Update data" />
     <MESSAGE value="Update info" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update info" />
+    <MESSAGE value="Handle delete betting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Handle delete betting" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/favicon.ico">
@@ -790,8 +796,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Match/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="103" column="72" selection-start-line="103" selection-start-column="72" selection-end-line="103" selection-end-column="72" />
+        <state relative-caret-position="482">
+          <caret line="97" column="8" lean-forward="true" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="8" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>

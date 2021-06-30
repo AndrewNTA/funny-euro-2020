@@ -53,6 +53,9 @@ const Match = () => {
   }, []);
 
   const handleBet = teamId => {
+    if (teamSelected && teamSelected === teamId) {
+      return;
+    }
     const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
     const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
 
@@ -74,9 +77,26 @@ const Match = () => {
         email: profileEmail,
       }
     };
-    betRecordsRef.update({
-      [teamId]: newTeamBetRecord,
-    });
+
+    let newSelectedTeamBetRecord = '';
+    if(teamSelected) {
+      const selectedTeamBetRecord = betRecords[teamSelected];
+      const indexSelectedBetRecord = selectedTeamBetRecord.indexOf(profileEmail);
+      newSelectedTeamBetRecord = [...selectedTeamBetRecord];
+      if (indexSelectedBetRecord > -1) {
+        newSelectedTeamBetRecord.splice(indexSelectedBetRecord, 1);
+      }
+    }
+
+    const updatedBetRecord = teamSelected ?
+      {
+        [teamId]: newTeamBetRecord,
+        [teamSelected]: isEmpty(newSelectedTeamBetRecord) ? '' : newSelectedTeamBetRecord,
+      } :
+      {
+        [teamId]: newTeamBetRecord,
+      };
+    betRecordsRef.update(updatedBetRecord);
     userHistoryRef.update({
       [profileId]: newTeamUserHistory,
     });
