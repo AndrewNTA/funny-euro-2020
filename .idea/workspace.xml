@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b190770-4b0f-48c4-a4eb-704e3efd77c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/containers/Match/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Match/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MenuBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MenuBar/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/Match/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="83" column="65" lean-forward="true" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
+            <state relative-caret-position="797">
+              <caret line="94" column="38" lean-forward="true" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -54,11 +54,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/MenuBar/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-223">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="893">
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/containers/MenuBar/styles.css" />
         <option value="$PROJECT_DIR$/src/containers/Schedule/styles.css" />
         <option value="$PROJECT_DIR$/src/core/firebase.js" />
-        <option value="$PROJECT_DIR$/src/containers/MenuBar/index.js" />
         <option value="$PROJECT_DIR$/src/containers/Schedule/index.js" />
         <option value="$PROJECT_DIR$/src/containers/utils.js" />
         <option value="$PROJECT_DIR$/src/containers/Home/index.js" />
@@ -117,6 +119,7 @@
         <option value="$PROJECT_DIR$/src/core/data.js" />
         <option value="$PROJECT_DIR$/src/containers/Match/styles.css" />
         <option value="$PROJECT_DIR$/src/containers/Match/index.js" />
+        <option value="$PROJECT_DIR$/src/containers/MenuBar/index.js" />
       </list>
     </option>
   </component>
@@ -544,17 +547,24 @@
       <option name="project" value="LOCAL" />
       <updated>1625024664707</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Fix bug">
+      <created>1625024943271</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1625024943271</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47055000" />
+    <option name="totallyTimeSpent" value="47778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13365282" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13365282" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -569,7 +579,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.4054054" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.40438873" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -603,11 +613,11 @@
     <MESSAGE value="Add expired time" />
     <MESSAGE value="Check time to block bet" />
     <MESSAGE value="Refactor" />
-    <MESSAGE value="Fix bug" />
     <MESSAGE value="Fix bug profile" />
     <MESSAGE value="Handle logic popup" />
     <MESSAGE value="Reduce logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduce logic" />
+    <MESSAGE value="Fix bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bug" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/favicon.ico">
@@ -812,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/MenuBar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-223">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Match/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -828,10 +831,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Match/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="83" column="65" lean-forward="true" selection-start-line="83" selection-start-column="65" selection-end-line="83" selection-end-column="65" />
+        <state relative-caret-position="797">
+          <caret line="94" column="38" lean-forward="true" selection-start-line="94" selection-start-column="38" selection-end-line="94" selection-end-column="38" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MenuBar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
