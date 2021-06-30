@@ -39,22 +39,34 @@ const Match = () => {
   const profileEmail = cookie.get(ZALORA_EURO_PROFILE_EMAIL, { path: '/' }) || '';
   const [betRecords, setBetRecords] = useState(null);
   const [userHistory, setUserHistory] = useState(null);
+  const [isShowExpiredPopUp, setIsShowExpiredPopUp] = useState(false);
+  const [isShowLoginPopUp, setIsShowLoginPopUp] = useState(false);
 
   useEffect(() => {
     const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
-    const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
 
     betRecordsRef.on('value', snapshot => {
       const result = snapshot.val();
       setBetRecords(result);
     });
-    userHistoryRef.on('value', snapshot => {
-      const result = snapshot.val();
-      setUserHistory(result);
-    });
+    if (!isEmpty(profileId)) {
+      const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
+      userHistoryRef.on('value', snapshot => {
+        const result = snapshot.val();
+        setUserHistory(result);
+      });
+    }
   }, []);
 
   const handleBet = teamId => {
+    if (isEmpty(profileId)) {
+      setIsShowLoginPopUp(true);
+      return;
+    }
+    if (isExpired) {
+      setIsShowExpiredPopUp(true);
+      return;
+    }
     if (teamSelected && teamSelected === teamId) {
       return;
     }
@@ -125,6 +137,14 @@ const Match = () => {
     userHistoryRef.update({
       [profileId]: isEmpty(newTeamUserHistory) ? '' : newTeamUserHistory,
     });
+  };
+
+  const closeExpiredPopUp = () => {
+    setIsShowExpiredPopUp(false);
+  };
+
+  const closeLoginPopUp = () => {
+    setIsShowLoginPopUp(false);
   };
 
   if (!matchDetail) {
@@ -254,6 +274,29 @@ const Match = () => {
           </div>
         </div>
       </div>
+      {isShowExpiredPopUp && <div className="pop-up">
+        <div className="overlay" onClick={closeExpiredPopUp}/>
+        <div className="pop-up-box">
+          <div className="pop-up-content">Đã hết thời gian dự đoán! Bạn không thể chỉnh sửa hay dự đoán thêm</div>
+          <div className="pop-up-btn pop-up-close-btn" onClick={closeExpiredPopUp}>
+            Đóng
+          </div>
+        </div>
+      </div>}
+      {isShowLoginPopUp && <div className="pop-up">
+        <div className="overlay" onClick={closeLoginPopUp}/>
+        <div className="pop-up-box">
+          <div className="pop-up-content">
+            Vui lòng đăng nhập để dự đoán kết quả
+          </div>
+          <div className="pop-up-btn pop-up-close-btn margin-space" onClick={closeLoginPopUp}>
+            Đóng
+          </div>
+          <div className="pop-up-btn pop-up-submit-btn">
+            Đăng nhập
+          </div>
+        </div>
+      </div>}
     </div>
   );
 };
