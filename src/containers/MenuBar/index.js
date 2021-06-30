@@ -42,18 +42,10 @@ const MenuBar = () => {
     });
   };
 
-  const showToastFailed = () => {
-    addToast('Đăng nhập thất bại! Vui lòng thử lại', {
-      appearance: 'error',
-      autoDismissTimeout: 3000,
-      autoDismiss: true,
-    });
-  };
-
   const { signIn } = useGoogleLogin({
     onSuccess: handleLoginSuccess,
     clientId: CLIENT_ID,
-    onFailure: () => {showToastFailed()},
+    onFailure: () => {},
     cookiePolicy: 'single_host_origin',
   });
 
