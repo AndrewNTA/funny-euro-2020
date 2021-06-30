@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import { gapi } from 'gapi-script';
 
@@ -11,11 +11,25 @@ import {
 } from '../../core/constants';
 import cookie from '../../cookie';
 import './styles.css';
+import firebase from '../../core/firebase';
+import { isEmpty } from "../utils";
 
 const Profile = () => {
   const history = useHistory();
   const profileUsername = cookie.get(ZALORA_EURO_PROFILE_NAME, { path: '/' }) || '';
   const profileEmail = cookie.get(ZALORA_EURO_PROFILE_EMAIL, { path: '/' }) || '';
+  const profileId = cookie.get(ZALORA_EURO_PROFILE_ID, { path: '/' }) || '';
+  const [userHistory, setUserHistory] = useState(null);
+
+  useEffect(() => {
+    const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
+
+    userHistoryRef.on('value', snapshot => {
+      const result = snapshot.val();
+      console.log('user history ==>', result);
+      setUserHistory(result);
+    });
+  }, []);
 
   const handleLogout = () => {
     const auth2 = gapi.auth2 && gapi.auth2.getAuthInstance();
@@ -58,6 +72,21 @@ const Profile = () => {
         <div className="title-profile space-profile">
           Lịch sử dự đoán
         </div>
+        {
+          userHistory ? <div>
+          {
+            Object.keys(userHistory).map(match => {
+              if (isEmpty(match)) {
+                return null;
+              } else {
+                return <div className="row-item">
+                  <div className="match-name-profile">{match.nameMatch}</div>
+                  <div className="selected-team-profile">{match.selected}</div>
+                </div>
+              }
+            })
+          }
+        </div> : <div className="not-found">Không có dữ liệu</div>}
       </div>
     </div>
   );

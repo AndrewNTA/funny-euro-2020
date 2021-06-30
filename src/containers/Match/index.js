@@ -59,7 +59,7 @@ const Match = () => {
       return;
     }
     const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
-    const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
+    const userHistoryRef = firebase.database().ref('UserHistory');
 
     const teamBetRecord = betRecords[teamId];
     const newTeamBetRecord = teamBetRecord ? [...teamBetRecord, profileEmail] : [profileEmail];
@@ -106,7 +106,7 @@ const Match = () => {
 
   const handleClearBet = () => {
     const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
-    const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
+    const userHistoryRef = firebase.database().ref('UserHistory');
 
     const teamBetRecord = betRecords[teamSelected];
     const indexBetRecord = teamBetRecord.indexOf(profileEmail);
@@ -132,9 +132,8 @@ const Match = () => {
   }
 
   const teamSelected = userHistory &&
-    userHistory[profileId] &&
-    userHistory[profileId][matchId] &&
-    userHistory[profileId][matchId]['selected'];
+    userHistory[matchId] &&
+    userHistory[matchId]['selected'];
 
   const { date, round, detail } = matchDetail;
   const isExpired = isExpiredTime(detail.expiredTime);
