@@ -4,10 +4,10 @@ import { gapi } from 'gapi-script';
 
 import banner from '../../static/images/banner.jpeg';
 import {
-  ZALORA_EURO_PROFILE_EMAIL,
-  ZALORA_EURO_PROFILE_NAME,
-  ZALORA_EURO_TOKEN,
-  ZALORA_EURO_PROFILE_ID
+  FUNNY_EURO_PROFILE_EMAIL,
+  FUNNY_EURO_PROFILE_NAME,
+  FUNNY_EURO_TOKEN,
+  FUNNY_EURO_PROFILE_ID
 } from '../../core/constants';
 import cookie from '../../cookie';
 import './styles.css';
@@ -16,9 +16,9 @@ import { isEmpty } from "../utils";
 
 const Profile = () => {
   const history = useHistory();
-  const profileUsername = cookie.get(ZALORA_EURO_PROFILE_NAME, { path: '/' }) || '';
-  const profileEmail = cookie.get(ZALORA_EURO_PROFILE_EMAIL, { path: '/' }) || '';
-  const profileId = cookie.get(ZALORA_EURO_PROFILE_ID, { path: '/' }) || '';
+  const profileUsername = cookie.get(FUNNY_EURO_PROFILE_NAME, { path: '/' }) || '';
+  const profileEmail = cookie.get(FUNNY_EURO_PROFILE_EMAIL, { path: '/' }) || '';
+  const profileId = cookie.get(FUNNY_EURO_PROFILE_ID, { path: '/' }) || '';
   const [userHistory, setUserHistory] = useState(null);
 
   useEffect(() => {
@@ -38,10 +38,10 @@ const Profile = () => {
         auth2.disconnect()
       )
     }
-    cookie.remove(ZALORA_EURO_TOKEN, { path: '/' });
-    cookie.remove(ZALORA_EURO_PROFILE_ID, { path: '/' });
-    cookie.remove(ZALORA_EURO_PROFILE_NAME, { path: '/' });
-    cookie.remove(ZALORA_EURO_PROFILE_EMAIL, { path: '/' });
+    cookie.remove(FUNNY_EURO_TOKEN, { path: '/' });
+    cookie.remove(FUNNY_EURO_PROFILE_ID, { path: '/' });
+    cookie.remove(FUNNY_EURO_PROFILE_NAME, { path: '/' });
+    cookie.remove(FUNNY_EURO_PROFILE_EMAIL, { path: '/' });
 
     history.push('/');
   };

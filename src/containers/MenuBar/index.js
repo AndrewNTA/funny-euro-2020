@@ -3,13 +3,13 @@ import { useHistory } from 'react-router-dom';
 import { useGoogleLogin } from 'react-google-login';
 import { useToasts } from 'react-toast-notifications';
 
-import logo from '../../static/images/logo-small.jpeg';
+import logo from '../../static/images/logo_small.png';
 import {
   CLIENT_ID,
-  ZALORA_EURO_PROFILE_EMAIL,
-  ZALORA_EURO_PROFILE_ID,
-  ZALORA_EURO_PROFILE_NAME,
-  ZALORA_EURO_TOKEN
+  FUNNY_EURO_PROFILE_EMAIL,
+  FUNNY_EURO_PROFILE_ID,
+  FUNNY_EURO_PROFILE_NAME,
+  FUNNY_EURO_TOKEN
 } from '../../core/constants';
 import cookie from '../../cookie';
 import './styles.css';
@@ -17,7 +17,7 @@ import './styles.css';
 const MenuBar = () => {
   const history = useHistory();
   const { addToast } = useToasts();
-  const currentUsername = cookie.get(ZALORA_EURO_PROFILE_NAME, { path: '/' }) || '';
+  const currentUsername = cookie.get(FUNNY_EURO_PROFILE_NAME, { path: '/' }) || '';
   const [username, setUsername] = useState(currentUsername);
   const handleLoginSuccess = response => {
     const tokenId = response.tokenId;
@@ -25,10 +25,10 @@ const MenuBar = () => {
     const profileName = response.profileObj && response.profileObj.name;
     const profileEmail = response.profileObj && response.profileObj.email;
 
-    cookie.set(ZALORA_EURO_TOKEN, tokenId, { path: '/' });
-    cookie.set(ZALORA_EURO_PROFILE_ID, profileId, { path: '/' });
-    cookie.set(ZALORA_EURO_PROFILE_NAME, profileName, { path: '/' });
-    cookie.set(ZALORA_EURO_PROFILE_EMAIL, profileEmail, { path: '/' });
+    cookie.set(FUNNY_EURO_TOKEN, tokenId, { path: '/' });
+    cookie.set(FUNNY_EURO_PROFILE_ID, profileId, { path: '/' });
+    cookie.set(FUNNY_EURO_PROFILE_NAME, profileName, { path: '/' });
+    cookie.set(FUNNY_EURO_PROFILE_EMAIL, profileEmail, { path: '/' });
 
     showToastSuccess();
     setUsername(profileName);
@@ -57,7 +57,7 @@ const MenuBar = () => {
     history.push('/');
   };
 
-  const tokenId = cookie.get(ZALORA_EURO_TOKEN, { path: '/' });
+  const tokenId = cookie.get(FUNNY_EURO_TOKEN, { path: '/' });
 
   return (
     <div className="menu-bar">

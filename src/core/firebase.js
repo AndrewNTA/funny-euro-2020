@@ -1,16 +1,16 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC8voV_V0BpGN3BtJxqtY_TrIjaicEHfLg",
-  authDomain: "zalora-euro.firebaseapp.com",
-  databaseURL: "https://zalora-euro-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "zalora-euro",
-  storageBucket: "zalora-euro.appspot.com",
-  messagingSenderId: "323664097969",
-  appId: "1:323664097969:web:0594337c9738f114ac2890",
-  measurementId: "G-1BEC1L4WDF"
+  apiKey: "AIzaSyBSCOloY0R8fi9mLqAMhI1u7tkavRTZ9j0",
+  authDomain: "funny-euro-2020.firebaseapp.com",
+  databaseURL: "https://funny-euro-2020-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "funny-euro-2020",
+  storageBucket: "funny-euro-2020.appspot.com",
+  messagingSenderId: "469378819029",
+  appId: "1:469378819029:web:d05f77c405d0f7d591d35c",
+  measurementId: "G-449647M7KT"
 };
-
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 export default firebase;

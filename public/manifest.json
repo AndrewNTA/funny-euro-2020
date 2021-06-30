@@ -1,19 +1,19 @@
 {
-  "short_name": "Zalora Euro",
-  "name": "Zalora Euro",
+  "short_name": "Funny Euro 2020",
+  "name": "Funny Euro 2020",
   "icons": [
     {
-      "src": "logo-Z.png",
+      "src": "logo_small.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "logo-Z.png",
+      "src": "logo_small.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo.png",
+      "src": "logo_small.png",
       "type": "image/png",
       "sizes": "512x512"
     }

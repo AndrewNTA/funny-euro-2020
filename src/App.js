@@ -9,7 +9,7 @@ import Match from './containers/Match';
 import history from './history';
 import store from './configureStore';
 
-const isMaintain = true;
+const isMaintain = false;
 
 const App = () => {
   return (

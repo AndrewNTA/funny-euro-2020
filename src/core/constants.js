@@ -1,6 +1,6 @@
-export const CLIENT_ID = '442973200160-si3h4jb3e4bkbrt0gulqp71qdgi3bva8.apps.googleusercontent.com';
+export const CLIENT_ID = '442973200160-vrofo5g60nnk0pk6proa1vtnjv3m0rqu.apps.googleusercontent.com';
 
-export const ZALORA_EURO_TOKEN = 'ZALORA_EURO_TOKEN';
-export const ZALORA_EURO_PROFILE_ID = 'ZALORA_EURO_PROFILE_ID';
-export const ZALORA_EURO_PROFILE_NAME = 'ZALORA_EURO_PROFILE_NAME';
-export const ZALORA_EURO_PROFILE_EMAIL = 'ZALORA_EURO_PROFILE_EMAIL';
+export const FUNNY_EURO_TOKEN = 'FUNNY_EURO_TOKEN';
+export const FUNNY_EURO_PROFILE_ID = 'FUNNY_EURO_PROFILE_ID';
+export const FUNNY_EURO_PROFILE_NAME = 'FUNNY_EURO_PROFILE_NAME';
+export const FUNNY_EURO_PROFILE_EMAIL = 'FUNNY_EURO_PROFILE_EMAIL';

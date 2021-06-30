@@ -7,8 +7,8 @@ import MenuBar from '../MenuBar';
 import './styles.css';
 import cookie from '../../cookie';
 import {
-  ZALORA_EURO_PROFILE_ID,
-  ZALORA_EURO_PROFILE_EMAIL
+  FUNNY_EURO_PROFILE_ID,
+  FUNNY_EURO_PROFILE_EMAIL
 } from '../../core/constants';
 import { isEmpty, isExpiredTime } from '../utils';
 
@@ -35,8 +35,8 @@ const getDetailMatch = (matchId, dateId) => {
 const Match = () => {
   const { matchId, dateId } = useParams();
   const matchDetail = getDetailMatch(matchId, dateId);
-  const profileId = cookie.get(ZALORA_EURO_PROFILE_ID, { path: '/' }) || '';
-  const profileEmail = cookie.get(ZALORA_EURO_PROFILE_EMAIL, { path: '/' }) || '';
+  const profileId = cookie.get(FUNNY_EURO_PROFILE_ID, { path: '/' }) || '';
+  const profileEmail = cookie.get(FUNNY_EURO_PROFILE_EMAIL, { path: '/' }) || '';
   const [betRecords, setBetRecords] = useState(null);
   const [userHistory, setUserHistory] = useState(null);
   const [isShowExpiredPopUp, setIsShowExpiredPopUp] = useState(false);
@@ -49,13 +49,12 @@ const Match = () => {
       const result = snapshot.val();
       setBetRecords(result);
     });
-    if (!isEmpty(profileId)) {
-      const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
-      userHistoryRef.on('value', snapshot => {
-        const result = snapshot.val();
-        setUserHistory(result);
-      });
-    }
+
+    const userHistoryRef = firebase.database().ref('UserHistory');
+    userHistoryRef.on('value', snapshot => {
+      const result = snapshot.val();
+      setUserHistory(result);
+    });
   }, []);
 
   const handleBet = teamId => {
@@ -152,8 +151,9 @@ const Match = () => {
   }
 
   const teamSelected = userHistory &&
-    userHistory[matchId] &&
-    userHistory[matchId]['selected'];
+    userHistory[profileId] &&
+    userHistory[profileId][matchId] &&
+    userHistory[profileId][matchId]['selected'];
 
   const { date, round, detail } = matchDetail;
   const isExpired = isExpiredTime(detail.expiredTime);
@@ -192,9 +192,8 @@ const Match = () => {
             Dự đoán kết quả
           </div>
           <div className="notify-detail">
-            Vì mục đích giải trí, mỗi account được bet 1 lần trên 1 trận đồng giá 30K. Lưu ý chỉ tính kết quả trong 90
-            phút chính thức. Cổng dự đoán sẽ đóng lại ngay giờ bóng lăn của trận đấu. Bạn có thể xem những nguời dự đoán
-            giống bạn ở danh sách bên dưới.
+            Lưu ý chỉ tính kết quả trong 90 phút chính thức. Cổng dự đoán sẽ đóng lại ngay giờ bóng lăn của trận đấu.
+            Bạn có thể xem những nguời dự đoán giống bạn ở danh sách bên dưới.
           </div>
           <div className="label-middle">Bạn chọn</div>
           <form action="#" className="form-data">
