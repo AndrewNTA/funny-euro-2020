@@ -73,6 +73,11 @@
     text-align: center;
 }
 
+.disable-button {
+    background-color: #dddddd;
+    cursor: no-drop;
+}
+
 .tag-match-detail {
     margin-right: 8px;
     text-align: center;
@@ -191,6 +196,9 @@
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+}
+.disable-label {
+    cursor: no-drop !important;
 }
 
 @media only screen and (max-width: 996px) {

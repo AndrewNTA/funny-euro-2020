@@ -10,7 +10,9 @@ import {
   ZALORA_EURO_PROFILE_ID,
   ZALORA_EURO_PROFILE_EMAIL
 } from '../../core/constants';
-import { isEmpty } from '../utils';
+import { isEmpty, isExpiredTime } from '../utils';
+
+const noop = () => {};
 
 const getDetailMatch = (matchId, dateId) => {
   for(let i = 0; i < data.length; i++) {
@@ -180,24 +182,33 @@ const Match = () => {
                 type="radio"
                 id={detail.team1.id}
                 name="radio-group"
+                disabled={isExpiredTime(detail.expiredTime)}
                 checked={teamSelected === detail.team1.id}
                 onChange={() => handleBet(detail.team1.id)}
               />
-              <label htmlFor={detail.team1.id}>{detail.team1.name}</label>
+              <label htmlFor={detail.team1.id} className={isExpiredTime(detail.expiredTime) ? 'disable-label' : ''}>
+                {detail.team1.name}
+              </label>
             </p>
             <p>
               <input
                 type="radio"
                 id={detail.team2.id}
                 name="radio-group"
+                disabled={isExpiredTime(detail.expiredTime)}
                 checked={teamSelected === detail.team2.id}
                 onChange={() => handleBet(detail.team2.id)}
               />
-              <label htmlFor={detail.team2.id}>{detail.team2.name}</label>
+              <label htmlFor={detail.team2.id} className={isExpiredTime(detail.expiredTime) ? 'disable-label' : ''}>
+                {detail.team2.name}
+              </label>
             </p>
           </form>
           <div className="middle-section">
-            {teamSelected && <div className="clear-btn" onClick={handleClearBet}>
+            {teamSelected && <div
+              className={isExpiredTime(detail.expiredTime) ? 'clear-btn disable-button' : 'clear-btn'}
+              onClick={isExpiredTime(detail.expiredTime) ? noop : handleClearBet}
+            >
               Xoá dự đoán
             </div>}
           </div>
