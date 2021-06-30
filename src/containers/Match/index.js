@@ -137,6 +137,8 @@ const Match = () => {
     userHistory[profileId][matchId]['selected'];
 
   const { date, round, detail } = matchDetail;
+  const isExpired = isExpiredTime(detail.expiredTime);
+
   return (
     <div>
       <MenuBar/>
@@ -182,11 +184,11 @@ const Match = () => {
                 type="radio"
                 id={detail.team1.id}
                 name="radio-group"
-                disabled={isExpiredTime(detail.expiredTime)}
+                disabled={isExpired}
                 checked={teamSelected === detail.team1.id}
                 onChange={() => handleBet(detail.team1.id)}
               />
-              <label htmlFor={detail.team1.id} className={isExpiredTime(detail.expiredTime) ? 'disable-label' : ''}>
+              <label htmlFor={detail.team1.id} className={isExpired ? 'disable-label' : ''}>
                 {detail.team1.name}
               </label>
             </p>
@@ -195,19 +197,19 @@ const Match = () => {
                 type="radio"
                 id={detail.team2.id}
                 name="radio-group"
-                disabled={isExpiredTime(detail.expiredTime)}
+                disabled={isExpired}
                 checked={teamSelected === detail.team2.id}
                 onChange={() => handleBet(detail.team2.id)}
               />
-              <label htmlFor={detail.team2.id} className={isExpiredTime(detail.expiredTime) ? 'disable-label' : ''}>
+              <label htmlFor={detail.team2.id} className={isExpired ? 'disable-label' : ''}>
                 {detail.team2.name}
               </label>
             </p>
           </form>
           <div className="middle-section">
             {teamSelected && <div
-              className={isExpiredTime(detail.expiredTime) ? 'clear-btn disable-button' : 'clear-btn'}
-              onClick={isExpiredTime(detail.expiredTime) ? noop : handleClearBet}
+              className={isExpired ? 'clear-btn disable-button' : 'clear-btn'}
+              onClick={isExpired ? noop : handleClearBet}
             >
               Xoá dự đoán
             </div>}
