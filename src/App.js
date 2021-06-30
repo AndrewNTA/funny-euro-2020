@@ -9,18 +9,22 @@ import Match from './containers/Match';
 import history from './history';
 import store from './configureStore';
 
+const isMaintain = true;
+
 const App = () => {
   return (
     <ToastProvider>
-      <Provider store={store}>
-        <Router history={history}>
-          <Switch>
-            <Route path="/" exact component={Home}/>
-            <Route path="/profile" exact component={Profile}/>
-            <Route path="/match/:dateId/:matchId" exact component={Match}/>
-          </Switch>
-        </Router>
-      </Provider>
+      {isMaintain ? <div className="maintain-text">Đang bảo trì</div> :
+        <Provider store={store}>
+          <Router history={history}>
+            <Switch>
+              <Route path="/" exact component={Home}/>
+              <Route path="/profile" exact component={Profile}/>
+              <Route path="/match/:dateId/:matchId" exact component={Match}/>
+            </Switch>
+          </Router>
+        </Provider>
+      }
     </ToastProvider>
   );
 };
