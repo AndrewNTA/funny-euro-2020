@@ -76,7 +76,7 @@ const Match = () => {
     const teamBetRecord = betRecords[teamId];
     const newTeamBetRecord = teamBetRecord ? [...teamBetRecord, profileEmail] : [profileEmail];
 
-    const teamUserHistory = userHistory[profileId];
+    const teamUserHistory = userHistory ? userHistory[profileId] : null;
     const newTeamUserHistory = teamUserHistory ? {
       ...teamUserHistory,
       [matchId]: {
