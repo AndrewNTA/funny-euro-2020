@@ -6,6 +6,8 @@ import BELGIUM_FLAG from '../static/images/belgium.png';
 import ITALY_FLAG from '../static/images/italy-flag.png';
 import CZECH_FLAG from '../static/images/czech-flag.png';
 import DENMARK_FLAG from '../static/images/denmark-flag.png';
+import SWITZERLAN_FLAG from '../static/images/switzerland-flag.png';
+import SPAIN_FLAG from '../static/images/spain-flag.png';
 
 export const data = [
   {
@@ -46,7 +48,7 @@ export const data = [
       {
         id: 'sweden_ukraine_3006',
         time: '02:00',
-        isFinished: false,
+        isFinished: true,
         isPen: false,
         info: 'Ukraine chấp 0.5',
         team1: {
@@ -54,13 +56,43 @@ export const data = [
           name: 'Thuỵ Điển',
           flag: SWEDEN_FLAG,
           special: '',
-          score: '',
+          score: 1,
           pen: '',
         },
         team2: {
           id: 'ukraine',
           name: 'Ukraine',
           flag: UKRAINE_FLAG,
+          special: '',
+          score: 2,
+          pen: '',
+        }
+      }
+    ]
+  },
+  {
+    dateId: '02072021',
+    date: 'Thứ sáu, 02/07/2021',
+    round: 'Tứ kết',
+    matches: [
+      {
+        id: 'switzerland_spain_0207',
+        time: '23:00',
+        isFinished: false,
+        isPen: false,
+        info: 'Thuỵ Sĩ chấp 0.5',
+        team1: {
+          id: 'switzerland',
+          name: 'Thuỵ Sĩ',
+          flag: SWITZERLAN_FLAG,
+          special: '',
+          score: '',
+          pen: '',
+        },
+        team2: {
+          id: 'spain',
+          name: 'Tây Ban Nha',
+          flag: SPAIN_FLAG,
           special: '',
           score: '',
           pen: '',
@@ -78,7 +110,7 @@ export const data = [
         time: '02:00',
         isFinished: false,
         isPen: false,
-        info: 'Đang cập nhập',
+        info: 'Bỉ chấp 0.5',
         team1: {
           id: 'belgium',
           name: 'Bỉ',
