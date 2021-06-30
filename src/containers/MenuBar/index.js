@@ -20,6 +20,7 @@ const MenuBar = () => {
   const currentUsername = cookie.get(ZALORA_EURO_PROFILE_NAME, { path: '/' }) || '';
   const [username, setUsername] = useState(currentUsername);
   const handleLoginSuccess = response => {
+    console.log('response ===>', response);
     const tokenId = response.tokenId;
     const profileId = response.googleId;
     const profileName = response.profileObj && response.profileObj.name;
@@ -45,7 +46,7 @@ const MenuBar = () => {
   const { signIn } = useGoogleLogin({
     onSuccess: handleLoginSuccess,
     clientId: CLIENT_ID,
-    onFailure: () => {},
+    onFailure: (error) => { console.log('error ==>', error) },
     cookiePolicy: 'single_host_origin',
   });
 
