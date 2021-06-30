@@ -289,11 +289,8 @@ const Match = () => {
           <div className="pop-up-content">
             Vui lòng đăng nhập để dự đoán kết quả
           </div>
-          <div className="pop-up-btn pop-up-close-btn margin-space" onClick={closeLoginPopUp}>
+          <div className="pop-up-btn pop-up-close-btn" onClick={closeLoginPopUp}>
             Đóng
-          </div>
-          <div className="pop-up-btn pop-up-submit-btn">
-            Đăng nhập
           </div>
         </div>
       </div>}

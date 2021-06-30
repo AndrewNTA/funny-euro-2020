@@ -243,22 +243,10 @@
     cursor: pointer;
 }
 
-.pop-up-submit-btn {
-    display: inline-block;
-    padding: 6px 15px;
-    border-radius: 5px;
-    color: #ffffff;
-    background-color: #4ea552;
-    cursor: pointer;
-}
-
 .pop-up-btn:hover {
     opacity: 0.8;
 }
 
-.margin-space {
-    margin-right: 10px;
-}
 
 @media only screen and (max-width: 996px) {
     .container-match-detail {
