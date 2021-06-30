@@ -10,6 +10,7 @@ import {
   ZALORA_EURO_PROFILE_ID,
   ZALORA_EURO_PROFILE_EMAIL
 } from '../../core/constants';
+import { isEmpty } from '../utils';
 
 const getDetailMatch = (matchId, dateId) => {
   for(let i = 0; i < data.length; i++) {
@@ -78,6 +79,29 @@ const Match = () => {
     });
     userHistoryRef.update({
       [profileId]: newTeamUserHistory,
+    });
+  };
+
+  const handleClearBet = () => {
+    const betRecordsRef = firebase.database().ref('BetRecords').child(matchId);
+    const userHistoryRef = firebase.database().ref('UserHistory').child(profileId);
+
+    const teamBetRecord = betRecords[teamSelected];
+    const indexBetRecord = teamBetRecord.indexOf(profileEmail);
+    const newTeamBetRecord = [...teamBetRecord];
+    if (indexBetRecord > -1) {
+      newTeamBetRecord.splice(indexBetRecord, 1);
+    }
+
+    const teamUserHistory = userHistory[profileId];
+    const newTeamUserHistory = teamUserHistory ? {...teamUserHistory} : {};
+    delete newTeamUserHistory[matchId];
+
+    betRecordsRef.update({
+      [teamSelected]: isEmpty(newTeamBetRecord) ? '' : newTeamBetRecord,
+    });
+    userHistoryRef.update({
+      [profileId]: isEmpty(newTeamUserHistory) ? '' : newTeamUserHistory,
     });
   };
 
@@ -153,7 +177,7 @@ const Match = () => {
             </p>
           </form>
           <div className="middle-section">
-            {teamSelected && <div className="clear-btn">
+            {teamSelected && <div className="clear-btn" onClick={handleClearBet}>
               Xoá dự đoán
             </div>}
           </div>
