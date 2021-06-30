@@ -18,6 +18,7 @@ export const data = [
       {
         id: 'england_germany_2906',
         time: '23:00',
+        expiredTime: '2021-06-29T16:00:00Z',
         isFinished: true,
         isPen: false,
         info: 'Anh chấp 0.5',
@@ -50,6 +51,7 @@ export const data = [
         time: '02:00',
         isFinished: true,
         isPen: false,
+        expiredTime: '2021-06-29T19:00:00Z',
         info: 'Ukraine chấp 0.5',
         team1: {
           id: 'sweden',
@@ -78,6 +80,7 @@ export const data = [
       {
         id: 'switzerland_spain_0207',
         time: '23:00',
+        expiredTime: '2021-07-02T16:00:00Z',
         isFinished: false,
         isPen: false,
         info: 'Thuỵ Sĩ chấp 0.5',
@@ -108,6 +111,7 @@ export const data = [
       {
         id: 'belgium_italy_0307',
         time: '02:00',
+        expiredTime: '2021-07-02T19:00:00Z',
         isFinished: false,
         isPen: false,
         info: 'Bỉ chấp 0.5',
@@ -131,6 +135,7 @@ export const data = [
       {
         id: 'czech_denmark_0307',
         time: '23:00',
+        expiredTime: '2021-07-03T16:00:00Z',
         isFinished: false,
         isPen: false,
         info: 'Đang cập nhập',
